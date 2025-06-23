@@ -63,27 +63,41 @@ function typeWriter() {
 typeWriter();
 
 const skills = [
-    { name: "Python", icon: "assets/python-icon.svg" },
-    { name: "SQL", icon: "assets/sql-icon.svg" },
-    { name: "Scala", icon: "assets/scala-icon.jpeg" },
-    { name: "Hadoop", icon: "assets/hadoop.png" },
-    { name: "Hive", icon: "assets/hive.png" },
-    { name: "Kafka", icon: "assets/apache_kafka-icon.svg" },
-    { name: "AWS", icon: "assets/aws-icon.svg" },
-    { name: "Azure", icon: "assets/azure.png" },
-    { name: "Cloudera", icon: "assets/cloudera.jpeg" },
-    { name: "JavaScript", icon: "assets/javascript-logo.svg" },
-    { name: "MySQL", icon: "assets/mysql-logo.svg" },
-    { name: "BERT", icon: "assets/bert.jpeg" },
-    { name: "C", icon: "assets/c-programming-language.svg" },
-    { name: "C++", icon: "assets/c++-logo.svg" },
-    { name: "CSS3", icon: "assets/css3-logo.svg" },
-    { name: "NLP", icon: "assets/nlp.jpeg" },
-    { name: "Git", icon: "assets/git-logo.svg" },
-    { name: "HTML", icon: "assets/html5-logo.svg" },
-    { name: "Jenkins", icon: "assets/jenkins-logo.svg" },
-    { name: "Docker", icon: "assets/docker-icon.svg" }
+  { name: "Python", icon: "assets/python-icon.svg" },
+  { name: "SQL", icon: "assets/sql-icon.svg" },
+  { name: "Scala", icon: "assets/scala-icon.jpeg" },
+  { name: "Hadoop", icon: "assets/hadoop.png" },
+  { name: "Hive", icon: "assets/hive.png" },
+  { name: "Kafka", icon: "assets/apache_kafka-icon.svg" },
+  { name: "AWS", icon: "assets/aws-icon.svg" },
+  { name: "Azure", icon: "assets/Azure.png" },
+  { name: "Cloudera", icon: "assets/Cloudera.jpeg" }, // fixed
+  { name: "javascript", icon: "assets/javascript-logo.svg" },
+  { name: "MySQL", icon: "assets/mysql-logo.svg" },
+  { name: "BERT", icon: "assets/BERT.jpeg" },
+  { name: "C", icon: "assets/C_Programming_Language.svg" },
+  { name: "C++", icon: "assets/C++_Logo.svg" },
+  { name: "CSS3", icon: "assets/CSS3_logo.svg" },
+  { name: "NLP", icon: "assets/NLP.jpeg" },
+  { name: "Git", icon: "assets/git-logo.svg" },
+  { name: "HTML", icon: "assets/HTML5_logo.svg" },
+  { name: "Jenkins", icon: "assets/jenkins_logo.svg" },
+  { name: "Docker", icon: "assets/docker-icon.svg" }
 ];
+
+// DOM Content Loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Populate skills
+  const skillsList = document.querySelector('.skills-list');
+  skills.forEach(skill => {
+    const li = document.createElement('li');
+    li.innerHTML = `<img src="${skill.icon}" class="skill-icon" alt="${skill.name} icon" /> ${skill.name}`;
+    skillsList.appendChild(li);
+  });
+
+  // ... (rest of your code)
+});
+
 
 
 const experiences = [
