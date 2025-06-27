@@ -206,14 +206,51 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     projectsGrid.appendChild(card);
   });
-
-  // Contact form submission (basic)
+ document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contact-form');
+  const statusDiv = document.createElement('div');
+  statusDiv.id = 'form-status';
+  contactForm.appendChild(statusDiv);
+
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
-      alert('Thank you for your message! I will get back to you soon.');
-      contactForm.reset();
+      statusDiv.textContent = 'Sending...';
+
+      try {
+        const response = await fetch('https://formspree.io/f/xqabwbwp', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: new FormData(contactForm)
+        });
+
+        if (response.ok) {
+          statusDiv.textContent = 'Thank you for your message! I will get back to you soon.';
+          contactForm.reset();
+        } else {
+          const data = await response.json();
+          if (data.errors) {
+            statusDiv.textContent = data.errors.map(error => error.message).join(', ');
+          } else {
+            statusDiv.textContent = 'Oops! There was a problem submitting your form.';
+          }
+        }
+      } catch (error) {
+        statusDiv.textContent = 'Oops! There was a problem submitting your form.';
+      }
     });
   }
 });
+
+  // Contact form submission (basic)
+//   const contactForm = document.getElementById('contact-form');
+//   if (contactForm) {
+//     contactForm.addEventListener('submit', (e) => {
+//       e.preventDefault();
+//       alert('Thank you for your message! I will get back to you soon.');
+//       contactForm.reset();
+//     });
+//   }
+// });
