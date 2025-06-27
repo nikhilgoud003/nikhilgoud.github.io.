@@ -74,7 +74,7 @@ const skills = [
   //{ name: "Cloudera", icon: "assets/Cloudera .jpeg" }, // fixed
   { name: "javascript", icon: "assets/javascript-logo.svg" },
   { name: "MySQL", icon: "assets/mysql-logo.svg" },
-  { name: "BERT", icon: "assets/BERT .jpeg" },
+  { name: "BERT", icon: "assets/BERT.jpeg" },
   { name: "C", icon: "assets/C_Programming_Language.svg" },
   { name: "C++", icon: "assets/C++_Logo.svg" },
   { name: "CSS3", icon: "assets/CSS3_logo.svg" },
