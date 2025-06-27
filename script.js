@@ -82,6 +82,20 @@ const skills = [
 
 // Experience Data
 const experiences = [
+    {
+    title: "Data Engineer",
+    company: "Georgia State University (SCALES Project)",
+    companyIcon: "assets/gsu_logo.png",
+    location: "On-Campus",
+    duration: "March 2024 - June 2025",
+    description: "Developed and deployed scalable legal data pipelines and NLP solutions for federal court analytics.",
+    achievements: [
+      "Built end-to-end Python pipelines using spaCy, Regex, and rule-based NER to extract, clean, classify, and cluster party and judge entities from PACER court data.",
+    "Refactored internal tools into the reusable scales-nlp package, enhancing modularity and maintainability.",
+    "Automated batch processing on remote multi-core servers, enabling efficient large-scale legal data analysis and entity resolution."
+    ]
+  },
+
   {
     title: "Data Engineer/Analyst",
     company: "Tata Consultancy Services",
