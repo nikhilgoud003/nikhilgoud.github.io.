@@ -206,11 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     projectsGrid.appendChild(card);
   });
- document.addEventListener('DOMContentLoaded', function () {
+ 
+  document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contact-form');
-  const statusDiv = document.createElement('div');
-  statusDiv.id = 'form-status';
-  contactForm.appendChild(statusDiv);
+  const statusDiv = document.getElementById('form-status');
 
   if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
@@ -220,9 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const response = await fetch('https://formspree.io/f/xqabwbwp', {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json'
-          },
+          headers: { 'Accept': 'application/json' },
           body: new FormData(contactForm)
         });
 
@@ -231,11 +228,9 @@ document.addEventListener('DOMContentLoaded', () => {
           contactForm.reset();
         } else {
           const data = await response.json();
-          if (data.errors) {
-            statusDiv.textContent = data.errors.map(error => error.message).join(', ');
-          } else {
-            statusDiv.textContent = 'Oops! There was a problem submitting your form.';
-          }
+          statusDiv.textContent = data.errors
+            ? data.errors.map(error => error.message).join(', ')
+            : 'Oops! There was a problem submitting your form.';
         }
       } catch (error) {
         statusDiv.textContent = 'Oops! There was a problem submitting your form.';
