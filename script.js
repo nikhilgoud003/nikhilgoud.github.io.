@@ -206,34 +206,15 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     projectsGrid.appendChild(card);
   });
- 
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  const response = await fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  });
-  if (response.ok) {
-    alert('Thank you for your message! I will get back to you soon.');
-    form.reset();
-  } else {
-    alert('Oops! There was a problem submitting your form.');
+
+
+  Contact form submission (basic)
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      contactForm.reset();
+    });
   }
 });
-
-
-  // Contact form submission (basic)
-//   const contactForm = document.getElementById('contact-form');
-//   if (contactForm) {
-//     contactForm.addEventListener('submit', (e) => {
-//       e.preventDefault();
-//       alert('Thank you for your message! I will get back to you soon.');
-//       contactForm.reset();
-//     });
-//   }
-// });
