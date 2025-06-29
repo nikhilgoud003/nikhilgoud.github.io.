@@ -85,7 +85,7 @@ const experiences = [
     {
     title: "Data Engineer",
     company: "Georgia State University (SCALES Project)",
-    companyIcon: "assets/gsu_logo.png",
+    companyIcon: "assets/gsu_logo.jpg",
     location: "On-Campus",
     duration: "March 2024 - June 2025",
     description: "Developed and deployed scalable legal data pipelines and NLP solutions for federal court analytics.",
