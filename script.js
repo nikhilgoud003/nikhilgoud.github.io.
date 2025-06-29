@@ -85,7 +85,7 @@ const experiences = [
     {
     title: "Data Engineer",
     company: "Georgia State University (SCALES Project)",
-    companyIcon: "assets/gsu_logo.jpg",
+    companyIcon: "assets/gsu_logo.png",
     location: "On-Campus",
     duration: "March 2024 - June 2025",
     description: "Developed and deployed scalable legal data pipelines and NLP solutions for federal court analytics.",
@@ -207,8 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsGrid.appendChild(card);
   });
 
-
-  Contact form submission (basic)
+  // Contact form submission (basic)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
