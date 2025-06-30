@@ -129,26 +129,34 @@ const experiences = [
 
 // Projects Data
 const projects = [
+      {
+      "title": "Party & Judge Disambiguation Pipeline, SCALES Project",
+      "description": "Developed scalable Python and NLP pipelines using spaCy, Regex, and rule-based NER to extract, clean, and disambiguate legal entities from PACER court data. Refactored internal tools into the scales-nlp package and deployed automated batch processing on remote multi-core servers.",
+      "technologies": ["Python", "spaCy", "Regex", "NER", "pandas", "joblib", "PACER JSON"],
+      "image": "assets/scales.png",
+      link: "https://github.com/nikhilgoud003"
+    }
+
   {
     title: "Disaster Text Classification & BIO Tagging Enhancement",
     description: "Developed a BERT and spaCy-based NLP pipeline for disaster text classification using co-occurrence extraction, PDF text processing, and chunking, with interpretability via transformer-interpreter.",
     technologies: ["Python", "BERT", "spaCy", "PyMuPDF", "Transformer Interpretability"],
-    image: "assets/nlp-project.jpg",
-    link: "https://github.com/your-github/disaster-text-classification"
+    image: "assets/dice.png",
+    link: "https://github.com/nikhilgoud003"
   },
   {
     title: "Hand Gesture Recognition System for Sign Language",
     description: "Designed a GUI using deep learning to help deaf and dumb people communicate with normal people. Published research paper on the project.",
     technologies: ["Python", "Deep Learning", "CNN", "GUI Development"],
-    image: "assets/sign-language-project.jpg",
+    image: "assets/slp.png",
     link: "https://www.researchgate.net/publication/361465545"
   },
   {
     title: "Cat & Dog Classification Using CNNs",
     description: "Developed a convolutional neural network model for image classification as part of Finland Labs internship training.",
     technologies: ["Python", "CNN", "AWS", "Machine Learning"],
-    image: "assets/cnn-project.jpg",
-    link: "https://github.com/your-github/cat-dog-classification"
+    image: "assets/icc.png,
+    link: "https://github.com/nikhilgoud003"
   }
 ];
 
