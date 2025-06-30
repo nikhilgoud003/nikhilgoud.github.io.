@@ -129,13 +129,13 @@ const experiences = [
 
 // Projects Data
 const projects = [
-      {
-      "title": "Party & Judge Disambiguation Pipeline, SCALES Project",
-      "description": "Developed scalable Python and NLP pipelines using spaCy, Regex, and rule-based NER to extract, clean, and disambiguate legal entities from PACER court data. Refactored internal tools into the scales-nlp package and deployed automated batch processing on remote multi-core servers.",
-      "technologies": ["Python", "spaCy", "Regex", "NER", "pandas", "joblib", "PACER JSON"],
-      "image": "assets/scales.png",
-      link: "https://github.com/nikhilgoud003"
-    }
+    //   {
+    //   "title": "Party & Judge Disambiguation Pipeline, SCALES Project",
+    //   "description": "Developed scalable Python and NLP pipelines using spaCy, Regex, and rule-based NER to extract, clean, and disambiguate legal entities from PACER court data. Refactored internal tools into the scales-nlp package and deployed automated batch processing on remote multi-core servers.",
+    //   "technologies": ["Python", "spaCy", "Regex", "NER", "pandas", "joblib", "PACER JSON"],
+    //   "image": "assets/scales.png",
+    //   link: "https://github.com/nikhilgoud003"
+    // }
 
   {
     title: "Disaster Text Classification & BIO Tagging Enhancement",
